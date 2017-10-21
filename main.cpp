@@ -30,7 +30,7 @@ int main(){
         }
         if (test) {
 	    primeList.push_back(i);
-	    if (primeList.size() % 1000 == 0) cout << i << endl;
+	    if (primeList.size() % 10000 == 0) cout << i << endl;
 	}
     }
 
