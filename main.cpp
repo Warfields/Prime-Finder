@@ -23,7 +23,7 @@ int main(){
     for (unsigned int i =3; i <= max; i++){
         test = true;
         for (unsigned int j = 0; j < primeList.size(); j++){
-            if (i / primeList.at(j) == 0){ //TODO: Check for int vs Float
+            if ((i / primeList.at(j))*primeList.at(j) == i){ //TODO: Check for int vs Float
                 test = false;
                 break;
             }
@@ -33,7 +33,7 @@ int main(){
 	    if (primeList.size() % 1000 == 0) cout << i << endl;
 	}
     }
-    
+
     ofstream primesTimes;
     primesTimes.open("primes.txt");
     if (!primesTimes.is_open()) {
@@ -54,7 +54,7 @@ int main(){
 
 int get_integer(string msg) { // barrowed from the hangman project
     while (true) {
-        string input;    
+        string input;
         int result = 0;
 
         cout << msg << endl;
